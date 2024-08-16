@@ -1,0 +1,419 @@
+/* General Styles */
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #1e1e1e;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    position: fixed; /* Fix header at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff; /* Light mode background */
+    color: #1e1e1e; /* Light mode text color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000; /* Ensure it's above other content */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.portfolio-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center; /* Center the portfolio text */
+    flex: 1;
+}
+
+.toggle {
+    background-color: #fff;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 50px 20px rgba(0, 0, 0, .1);
+    line-height: 1;
+}
+
+.input {
+    display: none;
+}
+
+.icon {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    transition: transform 500ms;
+    color: #000;
+}
+
+.icon--moon {
+    transition-delay: 200ms;
+    fill: #000;
+}
+
+.icon--sun {
+    transform: scale(0);
+    fill: #f5c518;
+}
+
+#switch:checked + .icon--moon {
+    transform: rotate(360deg) scale(0);
+}
+
+#switch:checked ~ .icon--sun {
+    transition-delay: 200ms;
+    transform: scale(1) rotate(360deg);
+}
+
+#switch:checked ~ .icon--sun {
+    fill: #f5c518;
+}
+
+/* Introduction Section Styles */
+.intro {
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    color: #f9f9f9;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    background-color: transparent;
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+.intro h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+    background-color: #1e1e1e;
+    color: #f9f9f9;
+}
+
+body.dark-theme header {
+    background-color: #2c2c2c; /* Dark mode background */
+    color: #f9f9f9; /* Dark mode text color */
+}
+
+body.dark-theme .intro {
+    background-color: transparent;
+    color: #f9f9f9;
+}
+
+/* Hide header on scroll */
+header.hidden {
+    transform: translateY(-100%);
+}
+
+/* Content Container Styles */
+.content-container {
+    display: flex;
+    justify-content: center; /* Center columns horizontally */
+    margin: 20px;
+}
+
+/* Left Column */
+.left-column {
+    flex: 1;
+    max-width: 600px; /* Set max width for left column */
+    margin-right: 20px;
+}
+
+/* Right Column */
+.right-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px; /* Set max width for right column */
+}
+
+/* General Card Styles */
+.about-me-card, .skills-card, .education-card, .projects-card, .experience-card, .testimonials-card {
+    display: flex;
+    align-items: stretch; /* Ensure the sections stretch to the same height */
+    padding: 20px;
+    max-width: 1380px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for dark mode */
+    margin: 20px auto; /* Center horizontally */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Header Section */
+.about-me-header, .skills-header, .education-header, .projects-header, .experience-header, .testimonials-header {
+    width: 150px;
+    background-color: #f5f5f5; /* Light mode background for header */
+    border-radius: 10px 0 0 10px; /* Rounded corners only on the left side */
+    padding: 20px;
+    font-size: 1.5rem; /* Ensure the font size is the same */
+    font-weight: bold; /* Ensure the font weight is the same */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    transition: background-color 0.3s; /* Smooth transition for dark mode */
+}
+
+/* Content Section */
+.about-me-content, .skills-content, .education-content, .projects-content, .experience-content, .testimonials-content {
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    color: #666;
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff; /* Light mode background for content */
+    border-radius: 0 10px 10px 0; /* Rounded corners only on the right side */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for dark mode */
+}
+
+.about-me-content p, .skills-content p, .education-content p, .projects-content p, .experience-content p {
+    font-size: 1.2rem; /* Ensure the font size is the same */
+    font-family: "Montserrat", sans-serif; /* Ensure the font family is the same */
+    color: #666; /* Light mode text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* List Styles */
+.projects-content ul, .experience-content ul, .testimonials-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.projects-content li, .experience-content li, .testimonials-content li{
+    margin-bottom: 15px;
+}
+
+/* Link Styles */
+.projects-content a, .experience-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.projects-content a:hover, .experience-content a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode Styles */
+body.dark-theme .about-me-card, body.dark-theme .skills-card, body.dark-theme .education-card, body.dark-theme .projects-card, body.dark-theme .experience-card, body.dark-theme .testimonials-card{
+    background-color: #2c2c2c; /* Dark mode background color for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow for better contrast */
+}
+
+body.dark-theme .about-me-header, body.dark-theme .skills-header, body.dark-theme .education-header, body.dark-theme .projects-header, body.dark-theme .experience-header, body.dark-theme .testimonials-header {
+    background-color: #3a3a3a; /* Darker background for header in dark mode */
+    color: #f9f9f9; /* Light mode text color */
+}
+
+body.dark-theme .about-me-content, body.dark-theme .skills-content, body.dark-theme .education-content, body.dark-theme .projects-content, body.dark-theme .experience-content, body.dark-theme .testimonials-content {
+    background-color: #2c2c2c; /* Dark mode background color for content */
+    color: #f9f9f9; /* Light mode text color */
+}
+
+body.dark-theme .about-me-content p, body.dark-theme .skills-content p, body.dark-theme .education-content p, body.dark-theme .projects-content p, body.dark-theme .experience-content p, body.dark-theme .testimonials-content p {
+    color: #f9f9f9; /* Ensure text is readable in dark mode */
+}
+
+.experience-card, .testimonials-card {
+    margin-top: 20px;
+}
+.testimonials-content{
+    width: 1100px;
+}
+
+/*Slider   */
+
+/* Slider Container */
+.slider {
+     /* Ensure buttons are positioned relative to this container */
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    background-color: #f4f4f4; /* Light mode background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+
+/* Slider Container */
+.slider {
+    position: relative; /* Ensure buttons are positioned relative to this container */
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    background-color: #f4f4f4; /* Light mode background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+/* Slider Container */
+.slider {
+    position: relative; /* Ensure buttons are positioned relative to this container */
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    background-color: #f4f4f4; /* Light mode background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+/* Slides Container */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Individual Slide */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Slider Buttons */
+button.prev, button.next {
+    background: linear-gradient(135deg, #4c4c4c, #c2c2c2); /* Gradient background */
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+    bottom: 10px;
+    position: absolute;
+}
+
+/* Position the previous button */
+button.prev {
+    right: 80px; 
+}
+
+/* Position the next button */
+button.next {
+    right: 10px; 
+}
+
+/* Button hover effect */
+button.prev:hover, button.next:hover {
+    background: linear-gradient(135deg, #c2c2c2, #4c4c4c); /* Reverse gradient on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Remove default focus outline */
+button.prev:focus, button.next:focus {
+    outline: none;
+}
+
+/* Dark Mode Styles for Slider Buttons */
+body.dark-theme button.prev, body.dark-theme button.next {
+    background: linear-gradient(135deg, #333, #555); /* Darker gradient for dark mode */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme button.prev:hover, body.dark-theme button.next:hover {
+    background: linear-gradient(135deg, #555, #333); /* Reverse gradient on hover for dark mode */
+}
+
+/* Dark Mode Styles for Slider */
+body.dark-theme .slider {
+    background-color: #2c2c2c;
+}
+
+body.dark-theme .slide {
+    color: #f9f9f9;
+}
+
+
+/*  Testimonial image */
+.testimonial-img{
+    width: 12rem;
+    height: 12rem;
+    display: block;
+    margin-bottom: 20px ;
+}
+
+/* video background  */
+/* Styles for the video background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350%;
+    overflow: hidden;
+    z-index: -1; /* Place video behind other content */
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Additional styles to ensure content is visible */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+footer {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+}

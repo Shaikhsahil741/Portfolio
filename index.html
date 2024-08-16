@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="portfolio-text">Portfolio</div>
+            <label class="toggle" for="switch">
+                <input id="switch" class="input" type="checkbox">
+                <div class="icon icon--moon">
+                    <svg height="32" width="32" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <div class="icon icon--sun">
+                    <svg height="32" width="32" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path>
+                    </svg>
+                </div>
+            </label>
+        </div>
+    </header>
+
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Introduction Section -->
+        <div class="intro">
+            <h1>Hi, I am Sahil Shaikh</h1>
+            <p>Scroll to know more about me</p>
+        </div>
+
+        <!-- Content Container -->
+        <div class="content-container">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- About Me Card -->
+                <section class="about-me-card">
+                    <div class="about-me-header">ABOUT ME</div>
+                    <div class="about-me-content">
+                        <p>
+                            Hi, I'm Sahil Shaikh from Mumbai, India. I'm a Computer Science student who has been fascinated by technology from a young age. Alongside my studies, I help run my family’s leather belt business, which has given me hands-on experience in tech and problem-solving.
+                            <br><br>
+                            When I’m not immersed in tech, you’ll find me exploring new places, swimming, or simply enjoying life’s little adventures. I’m always excited to learn new things and see how technology can make a difference in everyday life.
+                            <br><br>
+                            Thanks for stopping by, and feel free to connect with me!
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Skills Card -->
+                <section class="skills-card">
+                    <div class="skills-header">SKILLS</div>
+                    <div class="skills-content">
+                        <ul>
+                            <li>Programming Languages: Python, JavaScript, HTML, CSS, Java, Kotlin</li>
+                            <li>IoT Development: RFID systems, Arduino, Raspberry Pi</li>
+                            <li>Database Management: Google Firebase, MySQL</li>
+                            <li>Software: Visual Studio Code, PyCharm, Git, GitHub</li>
+                            <li>Other Skills: Flexible, Project Management, Adaptability</li>
+                            <li>Manufacturing Skills: 2D-3D CAD ,Milling, Lathe, Leather belt machine operations</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Education Card -->
+                <section class="education-card">
+                    <div class="education-header">EDUCATION</div>
+                    <div class="education-content">
+                        <ul>
+                            <li>Bachelor of Science (Computer Science) - Shri L.R. Tiwari Degree College, Third year</li>
+                            <li>Higher Secondary School Certificate Examination - Science Stream</li>
+                            <li>Secondary School Certificate Examination</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <!-- Projects Section -->
+        <section class="projects-card">
+            <div class="projects-header">PROJECTS</div>
+            <div class="projects-content">
+                <ul>
+                    <li>
+                        <strong>RFID-Based Attendance System:</strong> Developed an IoT-based attendance system using RFID and Firebase, featuring real-time updates and an interactive UI. Created a comprehensive attendance management system with features like manual addition, deletion of records, defaulter reports, and export to Excel functionality. 
+                        <a href="link-to-rfid-project" target="_blank">View Project</a>
+                    </li>
+                    <li>
+                        <strong>Weather Forecasting System:</strong> Implemented a weather forecasting system using Python and various APIs, providing real-time weather updates and predictions. 
+                        <a href="link-to-weather-project" target="_blank">View Project</a>
+                    </li>
+                    <li>
+                        <strong>Tic Tac Toe Game:</strong> Developed a simple Tic Tac Toe game using Kotlin. 
+                        <a href="link-to-tic-tac-toe-project" target="_blank">View Project</a>
+                    </li>
+                    <li>
+                        <strong>Dice Roller App:</strong> Dice roller app using Kotlin. 
+                        <a href="link-to-dice-roller-project" target="_blank">View Project</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+
+        <!--Experience sections-->
+        <div class="experience-card">
+            <div class="experience-header">
+                EXPERIENCE
+            </div>
+            <div class="experience-content">
+                <ul>
+                    <li>
+                        <strong>Customer Representative at Epicenter Technologies Private Limited</strong><br>
+                        <em>(May 2022 - July 2022)</em><br>
+                        Responsibilities:
+                        <ul>
+                            <li>Handled customer inquiries and provided solutions to technical issues.</li>
+                            <li>Managed customer support tickets and escalated issues as needed.</li>
+                            <li>Assisted with product demonstrations and training for new users.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Technical Operations Manager at Sahil Engineering Works</strong><br>
+                        <em>(August 2022 - July 2024)</em><br>
+                        Responsibilities:
+                        <ul>
+                            <li>Oversaw the integration and implementation of technical solutions in daily operations.</li>
+                            <li>Coordinated with engineering teams to develop and deploy technology solutions.</li>
+                            <li>Managed the configuration, maintenance, and optimization of hardware systems.</li>
+                            <li>Implemented process improvements and automated workflows to enhance operational efficiency.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Testimonials Card -->
+        <section class="testimonials-card">
+            <div class="testimonials-header">TESTIMONIALS</div>
+            <div class="testimonials-content">
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide">
+                            <div class="testimonial">
+                                <img src="sahdev-rajak-profile.jpg" alt="Sahdev Rajak" class="testimonial-img">
+                                <strong>Sahdev Rajak</strong><br>
+                                <em>Mumbai University Student</em><br>
+                                <span class="date">August 12, 2024</span>
+                                <p>"I had the pleasure of studying alongside Sahil Shaikh at Shree L. R. Tiwari College of Engineering, and I can confidently say he's an exceptional talent. His technical skills are top-notch, evident from his standout LinkedIn clone project. Sahil’s attention to detail, intuitive design, and ability to mimic essential features really impressed me. His expertise isn't limited to just one area—he’s well-versed in IoT, software development, and web technologies, with hands-on experience in innovative projects like RFID-based systems. Sahil’s problem-solving abilities, combined with his strong programming skills in Java, Python, and advanced web technologies, show his dedication and passion for tech. Sahil’s eagerness to learn and his impressive results make him a strong asset to any team. I highly recommend him for any role that values a dedicated, knowledgeable, and inventive individual."</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="testimonial">
+                                <img src="om-ail-profile.jpg" alt="Om Ail" class="testimonial-img">
+                                <strong>Om Ail</strong><br>
+                                <em>Cybersecurity Enthusiast</em><br>
+                                <span class="date">August 12, 2024</span>
+                                <p>"I had the pleasure of studying alongside Sahil Shaikh at Shree L. R. Tiwari College of Engineering, and I can confidently say that he is a remarkable individual with a strong technical acumen and a collaborative spirit. Sahil's work on his LinkedIn clone project was particularly impressive, demonstrating his attention to detail, user-friendly design, and ability to replicate core features effectively. His expertise spans across IoT, software development, and web technologies, underscored by his hands-on experience with innovative projects like RFID-based systems. Sahil's dedication to excellence, proactive problem-solving, and innovative thinking set him apart from his peers. His strong programming skills in Java, Python, and advanced web technologies further highlight his capability and passion for technology. Sahil’s commitment to learning and his impressive project outcomes make him a valuable asset to any team. I highly recommend Sahil for any role that seeks a driven, knowledgeable, and innovative candidate."</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="testimonial">
+                                <img src="naresh-kushwaha-profile.jpg" alt="Naresh Kushwaha" class="testimonial-img">
+                                <strong>Naresh Kushwaha</strong><br>
+                                <em>Experienced Web Developer & Trainer</em><br>
+                                <span class="date">August 11, 2024</span>
+                                <p>"Sahil Shaikh is a highly talented and resourceful individual with a strong foundation in computer science and IoT. His ability to seamlessly integrate technical knowledge with practical applications has been evident in the projects he has undertaken. Sahil's innovative mindset and collaborative spirit make him an excellent team player, always eager to contribute and learn. His work ethic and enthusiasm for technology are truly commendable, and I believe he will excel in any professional environment. I strongly recommend Sahil for any opportunity that requires a driven and knowledgeable candidate."</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="testimonial">
+                                <img src="hiral-chheda-profile.jpg" alt="Hiral Chheda" class="testimonial-img">
+                                <strong>Hiral Chheda</strong><br>
+                                <em>Attended Lr Tiwari Degree College</em><br>
+                                <span class="date">August 11, 2024</span>
+                                <p>"I have had the pleasure of knowing Sahil Shaikh during his academic journey, and I am consistently impressed by his dedication, technical skills, and ability to adapt quickly. His deep understanding of IoT, software development, and web technologies, combined with his hands-on experience in projects like RFID-based systems, makes him an asset to any team. Sahil's proactive approach to problem-solving and his commitment to excellence set him apart. I highly recommend him for any role where these qualities are valued."</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="testimonial">
+                                <img src="sophia-dcruz-profile.jpg" alt="Sophia Dcruz" class="testimonial-img">
+                                <strong>Sophia Dcruz</strong><br>
+                                <em>Assistant Professor</em><br>
+                                <span class="date">August 11, 2024</span>
+                                <p>"I highly recommend Sahil Shaikh, as an exceptional computer science student. He consistently demonstrated strong programming skills, particularly in IoT technology along with Java and Python programming. He has also excelled in both individual and team projects. His problem-solving abilities and innovative thinking make him a valuable asset to any organization. I'm confident Sahil will continue to achieve great success in his future endeavors."</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="testimonial">
+                                <img src="ayush-mishra-profile.jpg" alt="Ayush Mishra" class="testimonial-img">
+                                <strong>Ayush Mishra</strong><br>
+                                <em>Attended Shree L. R. Tiwari College of Engineering</em><br>
+                                <span class="date">August 11, 2024</span>
+                                <p>"I highly recommend Sahil’s LinkedIn clone project. His implementation showcases impressive attention to detail, user-friendly design, and functionality that mirrors the original platform’s core features effectively. Sahil’s technical skills and innovative approach make this project a standout example of his capabilities."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+        </section>
+      
+                                    
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Sahil Shaikh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+   </body>
+</html>
